@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美观的静态网页</title>
+    
+
+<style>
+/* Reset some basic elements */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a full background image */
+body {
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: contain; /* 图片将覆盖整个屏幕，但保持宽高比 */
+    background-color: #464646; /* 可以设置一个背景色，以防图片在某些尺寸下不能完全覆盖 */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for centering and padding */
+.container {
+    text-align: center;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+
+@keyframes colorfulText {
+    0% { text-shadow: 1px 1px 0 #ff0080, -1px -1px 0 #00ff80, 1px -1px 0 #80ff00, -1px 1px 0 #0080ff; }
+    25% { text-shadow: 1px 1px 0 #0080ff, -1px -1px 0 #ff0080, 1px -1px 0 #00ff80, -1px 1px 0 #80ff00; }
+    50% { text-shadow: 1px 1px 0 #80ff00, -1px -1px 0 #0080ff, 1px -1px 0 #ff0080, -1px 1px 0 #00ff80; }
+    75% { text-shadow: 1px 1px 0 #00ff80, -1px -1px 0 #80ff00, 1px -1px 0 #0080ff, -1px 1px 0 #ff0080; }
+    100% { text-shadow: 1px 1px 0 #ff0080, -1px -1px 0 #00ff80, 1px -1px 0 #80ff00, -1px 1px 0 #0080ff; }
+}
+
+/* Styling the title */
+h1 {
+    color: #fff; /* 设置基础颜色为白色 */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: colorfulText 5s infinite; /* 应用动画，5秒循环一次 */
+}
+
+
+/* Styling the alert text */
+.alert {
+    color: red;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Styling the description text */
+.description {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Styling the button */
+.btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .alert, .description {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>欢迎来到我的网页</h1>
+        <p class="alert">这是一个红色提示</p>
+        <p class="description">这里是白色的说明文字，欢迎您浏览。</p>
+        <!-- 给按钮添加一个 ID -->
+        <button id="myButton" class="btn">点击我</button>
+
+        <script>
+            // 使用 querySelector 方法获取按钮元素
+            var button = document.querySelector('.btn');
+
+            // 为按钮添加点击事件监听器
+            button.addEventListener('click', function () {
+                // 当按钮被点击时，页面将跳转到指定的URL
+                window.location.href = 'https://www.baidu.com';
+            });
+        </script>
+    </div>
+</body>
+
+</html>
