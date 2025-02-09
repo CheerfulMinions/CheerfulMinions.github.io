@@ -1,26 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>冰冷的她醒来之前-Online</title>
     
-
 <style>
 /* Reset some basic elements */
 body, h1, p, button {
     margin: 0;
     padding: 0;
 }
-
 /* Apply a full background image */
 body {
     background: url('bg.jpg') no-repeat center center fixed;
-    background-size: contain; /* 图片将覆盖整个屏幕，但保持宽高比 */
     background-color: #464646; /* 可以设置一个背景色，以防图片在某些尺寸下不能完全覆盖 */
     font-family: 'Arial', sans-serif;
+}
+
+/* 默认情况下使用 contain */
+body {
+    background-size: contain;
+}
+
+/* 当屏幕高度大于宽度时，使用 cover */
+@media (max-aspect-ratio: 1/1) {
+    body {
+        background-size: cover;
+    }
 }
 
 /* Container for centering and padding */
@@ -31,7 +38,6 @@ body {
     border-radius: 8px;
 }
 
-
 @keyframes colorfulText {
     0% { text-shadow: 1px 1px 0 #ff0080, -1px -1px 0 #00ff80, 1px -1px 0 #80ff00, -1px 1px 0 #0080ff; }
     25% { text-shadow: 1px 1px 0 #0080ff, -1px -1px 0 #ff0080, 1px -1px 0 #00ff80, -1px 1px 0 #80ff00; }
@@ -39,7 +45,6 @@ body {
     75% { text-shadow: 1px 1px 0 #00ff80, -1px -1px 0 #80ff00, 1px -1px 0 #0080ff, -1px 1px 0 #ff0080; }
     100% { text-shadow: 1px 1px 0 #ff0080, -1px -1px 0 #00ff80, 1px -1px 0 #80ff00, -1px 1px 0 #0080ff; }
 }
-
 /* Styling the title */
 h1 {
     color: #fff; /* 设置基础颜色为白色 */
@@ -48,21 +53,18 @@ h1 {
     animation: colorfulText 4s infinite; /* 应用动画，5秒循环一次 */
 }
 
-
 /* Styling the alert text */
 .alert {
     color: red;
     font-size: 1.2em;
     margin-bottom: 32px;
 }
-
 /* Styling the description text */
 .description {
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
-
 /* Styling the button */
 .btn {
     font-size: 1em;
@@ -75,35 +77,28 @@ h1 {
     transition: background-color 0.3s ease;
     margin-bottom: 45px;
 }
-
 .btn:hover {
     background-color: #0056b3;
 }
-
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
         margin-top: 20px;
         padding: 10px;
     }
-
     h1 {
         font-size: 2em;
     }
-
     .alert, .description {
         font-size: 1em;
     }
-
     .btn {
         padding: 8px 15px;
         font-size: 0.9em;
     }
 }
-
 </style>
 </head>
-
 <body>
     <div class="container">
         <h1>冰冷的她醒来之前</h1>
@@ -120,10 +115,9 @@ h1 {
             // 为按钮添加点击事件监听器
             button.addEventListener('click', function () {
                 // 当按钮被点击时，页面将跳转到指定的URL
-                window.location.href = 'http://116.196.66.15:8890/';
+                window.location.href = 'http://14.103.146.74:8890/';
             });
         </script>
     </div>
 </body>
-
 </html>
