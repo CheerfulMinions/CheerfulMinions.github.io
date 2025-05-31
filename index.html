@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>冰冷的她醒来之前-Online</title>
+    <title>冰冷的她醒来之前-Online - 更新日志</title>
     
 <style>
 /* Reset some basic elements */
@@ -16,6 +16,10 @@ body {
     background: url('bg.jpg') no-repeat center center fixed;
     background-color: #464646; /* 可以设置一个背景色，以防图片在某些尺寸下不能完全覆盖 */
     font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 默认情况下使用 contain */
@@ -36,6 +40,8 @@ body {
     padding: 20px;
     margin-top: 50px;
     border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
 }
 
 @keyframes colorfulText {
@@ -49,7 +55,7 @@ body {
 h1 {
     color: #fff; /* 设置基础颜色为白色 */
     font-size: 2.7em;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     animation: colorfulText 4s infinite; /* 应用动画，5秒循环一次 */
 }
 
@@ -80,6 +86,127 @@ h1 {
 .btn:hover {
     background-color: #0056b3;
 }
+
+/* 更新日志样式 */
+.update-log {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.update-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.update-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0080, #00ff80, #0080ff);
+    border-radius: 3px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin: 25px 0 15px;
+    color: #ffd700;
+    padding-left: 15px;
+    border-left: 4px solid #007bff;
+}
+
+.section-content {
+    padding: 0 20px;
+}
+
+.update-item {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.update-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff0080, #0080ff);
+    border-radius: 2px 0 0 2px;
+}
+
+.update-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.update-item strong {
+    color: #00ff80;
+}
+
+.update-item p {
+    color: #e0e0e0;
+    margin: 8px 0 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.impact-table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.impact-table th {
+    background: rgba(0, 123, 255, 0.7);
+    padding: 12px;
+    color: white;
+    text-align: center;
+}
+
+.impact-table td {
+    padding: 10px;
+    text-align: center;
+    color: #e0e0e0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.impact-table tr:last-child td {
+    border-bottom: none;
+}
+
+.impact-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.version-note {
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -96,6 +223,28 @@ h1 {
         padding: 8px 15px;
         font-size: 0.9em;
     }
+    
+    .update-log {
+        padding: 20px 15px;
+    }
+    
+    .update-title {
+        font-size: 1.6em;
+    }
+    
+    .section-title {
+        font-size: 1.3em;
+    }
+    
+    .update-item {
+        padding: 10px 12px;
+    }
+    
+    .impact-table th, 
+    .impact-table td {
+        padding: 8px 5px;
+        font-size: 0.85em;
+    }
 }
 </style>
 </head>
@@ -108,6 +257,54 @@ h1 {
         <button id="myButton" class="btn">进入游戏</button>
         
         <p class="description">为爱发电，大家且玩且珍惜</p>
+        
+        <!-- 更新日志部分 -->
+        <div class="update-log">
+            <h2 class="update-title">修复日志 (2026.06.01)</h2>
+            
+            <div class="section">
+                <h3 class="section-title">功能优化</h3>
+                <div class="section-content">
+                    <div class="update-item">
+                        <strong>房间号格式优化</strong>
+                        <p>房间号长度由8位减短为6位，方便加入房间时输入。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <strong>UI交互优化</strong>
+                        <p><strong>手牌布局</strong>：缩小手牌间距，界面更紧凑。</p>
+                        <p><strong>游戏结果页</strong>：重新设计游戏结果展示，现在可以看到更多信息。</p>
+                        <p><strong>帮助界面</strong>：为卡牌说明增加对应图片，辅助玩家进行游戏。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <strong>数据同步强化</strong>
+                        <p>昵称修改后实时同步至服务器及所有客户端。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <strong>卡牌信息展示完善</strong>
+                        <p>图书管理员查看结果时，补充显示卡牌名称（原仅展示图片）。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">问题修复</h3>
+                <div class="section-content">
+                    <div class="update-item">
+                        <strong>角色技能逻辑</strong>
+                        <p><strong>大小姐</strong>：修复返还卡牌时前端重复移除手牌的问题。</p>
+                        <p><strong>感染者</strong>：修复最后一轮使用技能后未正常拿牌的漏洞。</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <strong>数据同步与清理</strong>
+                        <p>完善资源回收机制，确保连接断开后彻底释放内存及会话数据。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script>
             var button = document.querySelector('.btn');
