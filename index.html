@@ -260,50 +260,23 @@ h1 {
         
         <!-- 更新日志部分 -->
         <div class="update-log">
-            <h2 class="update-title">修复日志 (2025.06.01)</h2>
+          <h2>2026.05.06</h2>
+          <ol>
+            <li>重新设计所有交互逻辑。</li>
+            <li>卡牌更清晰完整。</li>
+            <li>加入断线重连。</li>
+          </ol>
             
-            <div class="section">
-                <h3 class="section-title">功能优化</h3>
-                <div class="section-content">
-                    <div class="update-item">
-                        <strong>房间号格式优化</strong>
-                        <p>房间号长度由8位减短为6位，方便加入房间时输入。</p>
-                    </div>
-                    
-                    <div class="update-item">
-                        <strong>UI交互优化</strong>
-                        <p><strong>手牌布局</strong>：缩小手牌间距，界面更紧凑。</p>
-                        <p><strong>游戏结果页</strong>：重新设计游戏结果展示，现在可以看到更多信息。</p>
-                        <p><strong>帮助界面</strong>：为卡牌说明增加对应图片，辅助玩家进行游戏。</p>
-                    </div>
-                    
-                    <div class="update-item">
-                        <strong>数据同步强化</strong>
-                        <p>昵称修改后实时同步至服务器及所有客户端。</p>
-                    </div>
-                    
-                    <div class="update-item">
-                        <strong>卡牌信息展示完善</strong>
-                        <p>图书管理员查看结果时，补充显示卡牌名称（原仅展示图片）。</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">问题修复</h3>
-                <div class="section-content">
-                    <div class="update-item">
-                        <strong>角色技能逻辑</strong>
-                        <p><strong>大小姐</strong>：修复返还卡牌时前端重复移除手牌的问题。</p>
-                        <p><strong>感染者</strong>：修复最后一轮使用技能后未正常拿牌的漏洞。</p>
-                    </div>
-                    
-                    <div class="update-item">
-                        <strong>数据同步与清理</strong>
-                        <p>完善资源回收机制，确保连接断开后彻底释放内存及会话数据。</p>
-                    </div>
-                </div>
-            </div>
+          <h2>2025.06.01</h2>
+          <ol>
+            <li>房间号长度由8位减短为6位，方便输入。</li>
+            <li>手牌间距缩小，界面更紧凑；重新设计游戏结果页，展示更多信息；帮助界面增加卡牌说明图片。</li>
+            <li>昵称修改后实时同步至服务器及所有客户端。</li>
+            <li>图书管理员查看结果时，补充显示卡牌名称。</li>
+            <li>修复大小姐返还卡牌时前端重复移除手牌的问题。</li>
+            <li>修复感染者最后一轮使用技能后未正常拿牌的漏洞。</li>
+            <li>完善资源回收机制，确保连接断开后彻底释放内存及会话数据。</li>
+          </ol>
         </div>
 
         <script>
@@ -312,7 +285,7 @@ h1 {
             // 为按钮添加点击事件监听器
             button.addEventListener('click', function () {
                 // 当按钮被点击时，页面将跳转到指定的URL
-                window.location.href = 'http://114.55.219.184:8081/';
+                window.location.href = 'http://175.178.159.211:8001/';
             });
         </script>
     </div>
